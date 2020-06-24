@@ -4,7 +4,12 @@ if(!isset($_SESSION['userId'])){
 ?>
 
 <!DOCTYPE html>
-<head> <link rel="stylesheet" type="text/css" href="Login.css"></head>
+<html  lang="ro" dir="ltr">
+<head> 
+    
+<title>Mum</title>
+    <link rel="stylesheet" type="text/css" href="Login.css">
+</head>
 <body>
 <div>
 <h1>Register </h1>
@@ -28,6 +33,7 @@ if(!isset($_SESSION['userId'])){
 <a href="index.php"> LogIn</a>
 </div>
 </body>
+</html>
 <?php
 }
 else 

@@ -51,14 +51,14 @@ if(!isset($_POST['song_id']))
 
 function showLikes($song_id){
     $conn=mysqli_connect('localhost','admin','admin','asd');
+    
     if(!$conn)
     {
         die('server not connected');
     }
 
-    $result=$conn->query("select count(*) from like where song_id='$song_id'");
+    $result=$conn->query("select count(*) from `like` where song_id='$song_id'");
     $count=$result->fetch_row();
-    echo $count;
     mysqli_close($conn);
 }
 

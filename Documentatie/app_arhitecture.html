@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>MuM Besleaga Radu</title>
+        <link rel="stylesheet" href="css/scholarly.min.css">
+        <script src="js/scholarly.min.js"></script>
+    </head>
+    <body prefix="schema: http://schema.org">
+        <header>
+            <h1>MuM- Arhitectura aplicatiei</h1>
+        </header>
+        <div role="contentinfo">
+            <dl>
+                <dt>Dezvoltator</dt>
+                <dd>
+                    Besleaga Radu George
+                    <a href="https://www.facebook.com/radu4482">Besleaga Radu</a>
+                </dd>
+            </dl>
+        </div>
+        <section typeof="sa:Abstract" id="abstract" role="doc-abstract">
+            <h2>Scop</h2>
+            <p>
+                Scopul aplicatiei Mum este de a evalua productiile muzicale , respectivii artisti,
+                fiind organizati pe diverse categorii (artist , gen muzical).
+            </p>
+        </section>
+        <section id="introduction" role="doc-introduction">
+            <h2>Tehnologiile folosite</h2>
+            <section id="tehnology-htmlcss">
+                <h3>HTML si CSS</h3>
+                <section id="html">
+                    <h4>HTML</h4>
+                    <p>
+                        Am folosit tehnologia HTML pentru a crea interfata grafica si pentru a putea crea o anumita legatura cu clientul(utilizatorul).
+                    </p>
+                    <p>
+                        HTML se poate genera direct utilizând tehnologii de codare din partea serverului cum ar fi PHP, JSP sau ASP. Multe aplicații ca sistemele de gestionare a conținutului, wiki-uri și forumuri web generează pagini HTML.
+                    </p>
+
+                </section>
+                <section id="css">
+                    <h4>CSS</h4>
+                    <p>
+                        Am folosit limbajul CSS pentru a putea a imbunatatii aspectul vizual al proiectului , prin colorarea , modificarea formelor si alte tehnici digitale de manipulare a obiectelor din cadrul codului HTMl.
+                    </p>
+                    <p>
+                        Avand in vedere faptul ca codul HTML nu dispune de o paleta mare de optiuni grafice, am considerat ca limbajul CSS imi va fi de folos.
+                    </p>
+
+                </section>
+            </section>
+            <section id="tehnologii-js">
+                <h3>JavaScript</h3>
+                <p>
+                    Este esentiala pentru crearea paginilor web dinamice , incat am folosit aceasta tehnologie in locul clasicului REFRESH.
+                </p>
+                <p>
+                    Spre exemplu am folosit in cadrul butonului de comentarii si in cadrul butonului de like tehnologia suitei AJAX.
+                    Incat am putut sa returnez pe pagina principala requesturi catre server ce au fost posibile cu ajutor unor scripturi PHP
+                    care vor afisa raspunsurile pe partea de front-end.
+                </p>
+                </section>
+
+            <section id="tehnologii-php">
+                <h4>PHP</h4>
+                <p>
+                    Am putut face posibil mare parte din proiect cu ajutorul fisierelor si tehnologiei PHP, prin care am putut face requesturi catre baza de date si gestiona raspunsurile, prelucra datele si afisarea 
+                    informatiei in anumite componente din cadrul codului.
+                </p>
+            </section>
+        </section>
+        <section id="front-end">
+            <h2>Arhitectura aplicatiei - front-end</h2>
+            <img src="Admin.jpeg" alt="" width="800px">
+            <img src="Client.jpeg" alt="" width="800px">
+        </section>
+        <section id="back-end">
+            <h2>Arhitectura aplicatiei - back-end</h2>
+            <p>
+                Pe partea de baza de date , am folosit phpmyAdmin , crand o multitudine de tabele (artist, comment, like, song , user)
+            </p>
+            <p>
+                User: contine id, admin (0 in cazul in care este utilizator obisnuit, 1 in cazul in care este admin) , username,password si email.
+            </p>
+            <p>
+                Song: contine id, artist_id , name, path si gen( tipul muzical al melodiei echivalenta cu cea a artistului)
+            </p>
+            <p>
+                Like: contine id, song_id, user_id
+            </p>
+            <p>
+                Comment: contine id, song_id, user_id, comm(mesajul utilizatorului), time_upload(momentul in care a fost incarcat mesajul)
+            </p>
+            <p>
+                Artist: contine id, name si gender(tipul muzical predominant al artistului)
+            </p>
+            <p>
+                Am folosit o multitudine de fisiere de tipul php pentru a putea crea functiile dorite si pentru a putea afisa valorile corecte luate si procesate din baza de date.
+            </p>
+        </section>
+        <section id="code-management">
+            <h2>Management-ul codului - GitHub</h2>
+            <p>
+               Am folosit platforma online GitHub pentru a putea tine evidenta modului de evolutie a proiectului.
+                Optiunile acestei platforme sunt clar obserbile, incat am putut vedea diferentele de la un upload la altul , am butut vedea diferenta si in acelasi timp si evolutia proprie!
+            </p>
+            <p>
+                Tot odata putem coopera mai usor folosind fork-urile si prin updatarea de informatii a fiecaruia din echipa.
+            </p>
+        </section>
+    </body>
+</html>

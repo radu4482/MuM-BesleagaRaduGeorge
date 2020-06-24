@@ -1,16 +1,21 @@
 <?php
+include "likeC.php";
 $conn=mysqli_connect('localhost','admin','admin','asd');
 if(!$conn)
 {
     die('server not connected');
 }
 
-$id=$_GET['id'];
+$song_id=$_GET['SongId'];
+$user_id=$_GET['UserId'];
 
-$result=$conn->query("select count(*) from like where song_id='$id'");
+if(verify($song_id,$user_id)!=0)
+    unlike($song_id,$user_id);
+else
+    like($song_id,$user_id);
+$result=$conn->query("select count(*) from `like` where song_id='$song_id'");
 $count=$result->fetch_row();
-echo $count;
-$arr = array('count' => $count);
+echo" number of likes: ";
 mysqli_close($conn);
-echo json_encode($arr);
+echo json_encode($count);
 ?>

@@ -3,7 +3,10 @@
 include "artistupload.php";
 ?>
 <!DOCTYPE html>
-<head> <link rel="stylesheet" type="text/css" href="list.css"></head>
+<html lang="ro">
+<head > 
+<title>MuM</title>    
+<link rel="stylesheet" type="text/css" href="list.css"></head>
 <body>
 <?php
 session_start();
@@ -14,7 +17,6 @@ if(isset($_SESSION['user_id']))
       isset($_POST['artist']) &&
        $_POST['save_audio']=="Upload Audio")
             {
-                $artistName;
                 $dir="uploads/";
                 $audio_path=$dir.basename($_FILES['audioFile']['name']);
                 $audio_name=$_FILES['audioFile']['name'];
@@ -56,7 +58,10 @@ function displayAudios(){
         }?>
         <?php
 }
-
+?>
+</body>
+</html>
+<?php
 
 function getArtist($artistName){
     $conn=mysqli_connect('localhost','admin','admin','asd');
